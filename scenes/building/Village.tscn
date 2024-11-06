@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfnk7r7vcmum4"]
+
+[ext_resource type="Texture2D" uid="uid://3dpnfckw577g" path="res://assets/buildings/house_purple.png" id="1_mnhc8"]
+[ext_resource type="PackedScene" uid="uid://bdb2jq118p2hn" path="res://scenes/component/BuildingComponent.tscn" id="1_pepa5"]
+
+[node name="Village" type="Node2D"]
+y_sort_enabled = true
+
+[node name="BuildingComponent" parent="." instance=ExtResource("1_pepa5")]
+buildingResourcePath = "res://resources/building/village.tres"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(32, 32)
+texture = ExtResource("1_mnhc8")
+centered = false
+offset = Vector2(-64, -140)
