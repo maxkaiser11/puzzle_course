@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1aqb3y7nacfd"]
+[gd_scene load_steps=3 format=3 uid="uid://b1aqb3y7nacfd"]
 
 [ext_resource type="Texture2D" uid="uid://r6qw6pasnmtb" path="res://assets/buildings/tower_blue.png" id="1_3kl1o"]
+[ext_resource type="PackedScene" uid="uid://bdb2jq118p2hn" path="res://scenes/component/BuildingComponent.tscn" id="1_jaw1k"]
 
 [node name="Building" type="Node2D"]
+
+[node name="BuildingComponent" parent="." instance=ExtResource("1_jaw1k")]
+BuildableRadius = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_3kl1o")
